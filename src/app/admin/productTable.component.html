@@ -1,0 +1,54 @@
+<table class="table-sm table-striped">
+    <thead>
+    <tr>
+    <th>ID</th><th>Ім'я</th><th>Категорія</th><th>Ціна</th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of getProducts()">
+    <td>{{p.id}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.category}}</td>
+    <td>{{p.price | currency:"USD":"symbol":"2.2-2"}}</td>
+    <td>
+    <button class="btn btn-sm btn-warning m-1"
+    [routerLink]="['/admin/main/products/edit', p.id]">
+    Редагувати
+    </button>
+    <button class="btn btn-sm btn-danger" (click)="deleteProduct(p.id)">
+    Видалити
+    </button>
+    </td>
+    </tr>
+    </tbody>
+</table>
+<button class="btn btn2 btn-primary" routerLink="/admin/main/products/create">
+ Створити продукт
+</button>
+<style>
+    .btn2{
+        padding: 10px 30px;
+  color: #fff;
+  box-sizing: border-box;
+  border-width: 2px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4) ;
+  background-size: 400%;
+  border-radius: 30px;
+  z-index: 1;
+}
+.btn2:hover{
+  animation: animate 8s linear infinite;
+}
+table{
+    color: #fff;
+}
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+</style>

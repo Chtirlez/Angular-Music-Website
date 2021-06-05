@@ -1,0 +1,179 @@
+<div class="container-fluid">
+    <div class="row">
+    <div class="col col1 text-white">
+    <a class="navbar-brand">O.A.O Music</a>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col mt-2" style="color: #fff;">
+    <h2 class="text-center">Ваш кошик</h2>
+    <table class="table-bordered table-striped p-2">
+    <thead>
+    <tr>
+    <th>Кількість</th>
+    <th>Товар</th>
+    <th class="text-right">Ціна</th>
+    <th class="text-right">Підсумок</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngIf="cart.lines.length == 0">
+    <td colspan="4" class="text-center">
+    Кошик порожній
+    </td>
+    </tr>
+    <tr *ngFor="let line of cart.lines">
+    <td>
+    <input type="number" class="form-control-sm"
+    style="width:5em"
+   [value]="line.quantity"
+   (change)="cart.updateQuantity(line.product,
+    $event.target.value)" />
+    </td>
+    <td>{{line.product.name}}</td>
+ <td class="text-right">
+ {{line.product.price | currency:"USD":"symbol":"2.2-2"}}
+ </td>
+ <td class="text-right">
+ {{(line.lineTotal) | currency:"USD":"symbol":"2.2-2" }}
+ </td>
+ <td class="text-center">
+ <button class="btn btn4 btn-sm"
+ (click)="cart.removeLine(line.product.id)"><div class="btn5">
+ Видалити</div>
+ </button>
+ </td>
+ </tr>
+ </tbody>
+ <tfoot>
+ <tr>
+ <td colspan="3" class="text-right">До оплати</td>
+ <td class="text-right">
+ {{cart.cartPrice | currency:"USD":"symbol":"2.2-2"}}
+ </td>
+ </tr>
+ </tfoot>
+ </table>
+ </div>
+ </div>
+ <div class="row">
+ <div class="col">
+ <div class="text-center">
+ <button class="btn btn2 m-1" routerLink="/store">
+ Продовжити покупки
+ </button>
+ <button class="btn btn1 m-1" routerLink="/checkout"
+ [disabled]="cart.lines.length == 0 || !connected"><div class="btn3">
+ {{ connected ? 'Checkout' : 'Offline' }}</div>
+
+ </button>
+ </div>
+ </div>
+</div>
+<style>
+    .col1{
+  box-shadow: 0px 3px 19px -6px rgb(57 80 117);
+  padding: 8px 15px;
+  margin-bottom: 30px;
+}
+.navbar-brand{
+  text-shadow: 0 0 11px #007bff;
+    color: #8bacf9;
+}   
+.btn2{
+        padding: 10px 30px;
+  color: #fff;
+  box-sizing: border-box;
+  border-width: 2px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4) ;
+  background-size: 400%;
+  border-radius: 30px;
+  z-index: 1;
+}
+.btn2:hover{
+  animation: animate 8s linear infinite;
+}
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+.btn1{
+    padding: 10px 17px;   
+     margin: 10px 20px;
+  color: #fff;
+  box-sizing: border-box;
+  border-width: 2px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4) ;
+  background-size: 400%;
+  border-radius: 30px;
+}
+.btn1:hover{
+  animation: animate 8s linear infinite;
+}
+.btn1:before{
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4) ;
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.btn1:hover:before{
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+.btn3{
+  background-color: #0f1a2b;
+    padding: 5px;
+    margin: -5px -11px;
+    border-radius: 20px;
+}
+.btn4{
+  padding: 5px 11px;
+  color: #fff;
+  box-sizing: border-box;
+  border-width: 2px;
+  background: linear-gradient(90deg, #f7ce18, #ff0707, #b87130, #9e0404) ;
+  background-size: 400%;
+  border-radius: 30px;
+}
+.btn4:hover{
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+.btn5{
+  background-color: #0f1a2b;
+    padding: 5px;
+    margin: -5px -11px;
+    border-radius: 20px;
+}
+table{
+  margin: 20px;
+  color: #fff;
+  margin-left: 30%;
+}
+
+
+
+</style>

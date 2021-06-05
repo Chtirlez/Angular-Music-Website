@@ -1,0 +1,87 @@
+<div class="bg-primary1 p-2 text-white" [class.bg-warning]="editing"
+ [class.text-dark]="editing">
+ <h5>{{editing ? "Edit" : "Create"}} Product</h5>
+</div>
+<form novalidate #form="ngForm" (ngSubmit)="save(form)">
+ <div class="form-group">
+ <label>Назва</label>
+ <input class="form-control" name="name" [(ngModel)]="product.name" />
+ </div>
+ <div class="form-group">
+ <label>Категорія</label>
+ <input class="form-control" name="category" [(ngModel)]="product.category" />
+ </div>
+ <div class="form-group">
+ <label>Опис</label>
+ <textarea class="form-control" name="description"
+ [(ngModel)]="product.description">
+ </textarea>
+ </div>
+ <div class="form-group">
+ <label>Ціна</label>
+ <input class="form-control" name="price" [(ngModel)]="product.price" />
+ </div>
+ <button type="submit" class="btn btn2 m-1" [class.btn-warning]="editing">
+ {{editing ? "Save" : "Create"}}
+ </button>
+ <button type="reset" class="btn btn4" routerLink="/admin/main/products">
+    <div class="btn5">Відмінити</div>
+ </button>
+</form>
+<style>
+    .bg-primary1{
+        border-radius: 10px;
+    }
+    label{
+        text-shadow: 0 0 11px #007bff;
+    color: #8bacf9;
+    }
+    .btn2{
+        padding: 7px 30px;
+  color: #fff;
+  box-sizing: border-box;
+  border-width: 2px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4) ;
+  background-size: 400%;
+  border-radius: 30px;
+  z-index: 1;
+}
+.btn2:hover{
+  animation: animate 8s linear infinite;
+}
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+.btn4{
+  color: #fff;
+  box-sizing: border-box;
+  border-width: 2px;
+  background: linear-gradient(90deg, #f7ce18, #ff0707, #b87130, #9e0404) ;
+  background-size: 400%;
+  border-radius: 30px;
+}
+.btn4:hover{
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+.btn5{
+  background-color: #0f1a2b;
+    padding: 5px;
+    margin: -5px -11px;
+    border-radius: 20px;
+}
+
+</style>

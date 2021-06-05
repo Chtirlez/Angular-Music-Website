@@ -1,0 +1,91 @@
+{
+  "configVersion": 1,
+  "timestamp": 1621238022080,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/5-es2015.3e7658c331b1a2e04662.js",
+        "/5-es5.3e7658c331b1a2e04662.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main-es2015.7918149973b9db63fd7f.js",
+        "/main-es5.7918149973b9db63fd7f.js",
+        "/polyfills-es2015.387d40c09b6078570d9c.js",
+        "/polyfills-es5.c537509ba127bea450b9.js",
+        "/runtime-es2015.4ea0d6d8e8eb4e671ffc.js",
+        "/runtime-es5.4ea0d6d8e8eb4e671ffc.js",
+        "/styles.79ea8a0f03eb2bd71521.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-product",
+      "patterns": [
+        "\\/api\\/products"
+      ],
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": 432000000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/5-es2015.3e7658c331b1a2e04662.js": "b3c44956cc4dc86b2c4865c49b5fc8e4018d79ad",
+    "/5-es5.3e7658c331b1a2e04662.js": "6f987a01d8072257eb92f04d2cca316050a622a3",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "3d9bc245516871c24a9f282d6048d3f5b13d8ab3",
+    "/main-es2015.7918149973b9db63fd7f.js": "e51ed1c5ca4d4dd381a9d45005979d9edcb4a8e5",
+    "/main-es5.7918149973b9db63fd7f.js": "8a026e966bb53ae5eea7730edfde85c281e3e582",
+    "/polyfills-es2015.387d40c09b6078570d9c.js": "b781f6723ec3a789640a4e9f9108b22c6cef4684",
+    "/polyfills-es5.c537509ba127bea450b9.js": "df30bf49c4c702c26850da0befca6966c4b36a1b",
+    "/runtime-es2015.4ea0d6d8e8eb4e671ffc.js": "e76dc42fc0217209996895bc83c556ea7fe29c6e",
+    "/runtime-es5.4ea0d6d8e8eb4e671ffc.js": "00d299ed4a1919994a05ad5be18db523d95c6d47",
+    "/styles.79ea8a0f03eb2bd71521.css": "deaa6a3fffdb245e025dfafc6468596a5824dba1"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

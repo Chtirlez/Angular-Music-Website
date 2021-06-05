@@ -1,0 +1,193 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "Follow Me Around",
+      "category": "Jazz",
+      "description": "Internet Girl",
+      "price": 0.99
+    },
+    {
+      "id": 3,
+      "name": "Regenerative Reset",
+      "category": "Rock-n-role",
+      "description": "Mattaverse",
+      "price": 0.99
+    },
+    {
+      "id": 4,
+      "name": "Healing Tranquility",
+      "category": "POP",
+      "description": "Mattaverse",
+      "price": "0.95"
+    },
+    {
+      "id": 5,
+      "name": "Love(The Universal Constant)",
+      "category": "Rock-n-role",
+      "description": "Mattaverse",
+      "price": 0.99
+    },
+    {
+      "id": 6,
+      "name": "Push Start",
+      "category": "POP",
+      "description": "STO CULTR",
+      "price": 0.99
+    },
+    {
+      "id": 7,
+      "name": "Rush",
+      "category": "POP",
+      "description": "STO CULTR",
+      "price": 0.99
+    },
+    {
+      "id": 8,
+      "name": "Runnin'",
+      "category": "POP",
+      "description": "STO CULTR",
+      "price": 0.99
+    },
+    {
+      "id": 9,
+      "name": "On Fire",
+      "category": "Jazz",
+      "description": "ReauBeau, CASUAL",
+      "price": 0.99
+    },
+    {
+      "id": 10,
+      "name": "Never Let Me Go",
+      "category": "Rock-n-role",
+      "description": "Sem, Silent Child",
+      "price": 0.99
+    }
+  ],
+  "orders": [
+    {
+      "cart": {
+        "lines": [
+          {
+            "product": {
+              "id": 2,
+              "name": "Follow Me Around",
+              "category": "Jazz",
+              "description": "Internet Girl",
+              "price": 0.99
+            },
+            "quantity": 2
+          }
+        ],
+        "itemCount": 2,
+        "cartPrice": 1.98
+      },
+      "shipped": false,
+      "name": "s",
+      "address": "d",
+      "city": "f",
+      "state": "g",
+      "zip": "h",
+      "country": "j",
+      "id": 1
+    },
+    {
+      "cart": {
+        "lines": [
+          {
+            "product": {
+              "id": 2,
+              "name": "Follow Me Around",
+              "category": "Jazz",
+              "description": "Internet Girl",
+              "price": 0.99
+            },
+            "quantity": 1
+          }
+        ],
+        "itemCount": 1,
+        "cartPrice": 0.99
+      },
+      "shipped": false,
+      "name": "q",
+      "address": "w",
+      "city": "e",
+      "state": "r",
+      "zip": "t",
+      "country": "y",
+      "id": 2
+    },
+    {
+      "cart": {
+        "lines": [
+          {
+            "product": {
+              "id": 2,
+              "name": "Follow Me Around",
+              "category": "Jazz",
+              "description": "Internet Girl",
+              "price": 0.99
+            },
+            "quantity": 1
+          }
+        ],
+        "itemCount": 1,
+        "cartPrice": 0.99
+      },
+      "shipped": false,
+      "name": "1",
+      "address": "q",
+      "city": "e",
+      "state": "r",
+      "zip": "t",
+      "country": "y",
+      "id": 3
+    },
+    {
+      "cart": {
+        "lines": [
+          {
+            "product": {
+              "id": 3,
+              "name": "Regenerative Reset",
+              "category": "Rock-n-role",
+              "description": "Mattaverse",
+              "price": 0.99
+            },
+            "quantity": 2
+          },
+          {
+            "product": {
+              "id": 4,
+              "name": "Healing Tranquility",
+              "category": "POP",
+              "description": "Mattaverse",
+              "price": 34.95
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": 5,
+              "name": "Love(The Universal Constant)",
+              "category": "Rock-n-role",
+              "description": "Mattaverse",
+              "price": 0.99
+            },
+            "quantity": 1
+          }
+        ],
+        "itemCount": 4,
+        "cartPrice": 37.92
+      },
+      "shipped": false,
+      "name": "1",
+      "address": "s",
+      "city": "d",
+      "state": "f",
+      "zip": "g",
+      "country": "h",
+      "id": 4
+    }
+  ]
+}
